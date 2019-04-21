@@ -157,7 +157,7 @@ class Criteria {
 class Schedule {
 	constructor(validClass){
 		this.list = [];
-		this.possibleChoice = validClass;
+		this.possibleChoice = sortChoices(validClass);
 	}
 	sortChoices(list){
 		var result = [];
@@ -174,20 +174,35 @@ class Schedule {
 			}
 			else {
 				result.push([list[i].name]);
+				result[result.length - 1].push(list[i]);
 			}
 
 		}
 		return result;
 	}
 	makeSchedule(){
+		count = 0;
+		result = [];
 		pc = this.possibleChoice;
-		for (var i = 0; i < pc.length; i++){
+		for (var i = 0; i < this.possibleChoice.length; i++){
+			if (!pc[i][0]){
+				break;
+			}
+			result.push(pc[i][0]);
+			count++;
+			for (var j=i; j< this.possibleChoice.length; j++){
+				pc[j] = this.filterChoices(pc[j], result[result.length-1]);
+			}
+			
 		}
+		return result;
 	}
 	filterChoices(list, item){
-		
-	}
-	_isOverlap(list, item){
+		for (var i = 0; i < list.length; i++){
+			if (list[i]._isOverlap(item)){
+				list.splice(i,1);
+			}
+		}
 	}
 
 }
