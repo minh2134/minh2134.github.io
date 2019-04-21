@@ -1,3 +1,19 @@
+//the classes/methods/variables that has a leading underscore is reserved for internal use. Do not make changes if not absolutely necessary
+//the expected input to make class is a 2 dimension array with the following format:
+//database:
+//	- entry #1:
+//		- name (string)
+//		- crn number (string)
+//		- schedule:
+//			- day #1: 
+//				- date (monday/tuesday/...)
+//				- start time (string hr:min 24h format)
+//				- end time (string hr:min 24h format)
+//			- day #2:
+//				- same as day 1
+//	- entry #2:
+//		- same as entry #1
+
 class _Date {
 	constructor(dt = null, tStart = null, tEnd = null){
 		this.date = dt;
@@ -143,10 +159,20 @@ class Schedule {
 		this.list = [];
 		this.possibleChoice = validClass;
 	}
+	sortChoices(list){
+		result = [];
+		//creates category
+		for (var i = 0; i<list.length; i++){
+			
+		}
+	}
 	makeSchedule(){
 		pc = this.possibleChoice;
 		for (var i = 0; i < pc.length; i++){
 		}
+	}
+	filterChoices(list, item){
+		
 	}
 
 }
