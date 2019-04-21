@@ -1,10 +1,14 @@
 class _Date {
-	constructor(dt, tStart, tEnd){
+	constructor(dt = null, tStart = null, tEnd = null){
 		this.date = dt;
-		this.timeStart = this.formatTheTime(tStart);
-		this.timeEnd = this.formatTheTime(tEnd);
-		this.timeStartFormatted = this.convertToDecimal(timeStart);
-		this.timeEndFormatted = this.convertToDecimal(timeEnd);
+		if (tStart){
+			this.timeStart = this.formatTheTime(tStart);
+			this.timeStartFormatted = this.convertToDecimal(timeStart);
+		}
+		if (tEnd){
+			this.timeEnd = this.formatTheTime(tEnd);
+			this.timeEndFormatted = this.convertToDecimal(timeEnd);
+		}
 	}
 	
 	formatTheTime(string){
@@ -12,12 +16,28 @@ class _Date {
 		for (var i = 0; i <result.length; i++){
 			result[i] = parseInt(result[i]);
 		}
+		return result;
 	}
 	convertToDecimal(time){
-		return hr + min/60 + sec/3600;
+		return hr + min/60;
 	}
 	convertToNormalFormat(time){
-		return 0;
+		minute = time*60;
+		hour = Math.floor(minute/60);
+		minute -= hour*60;
+
+		return [hour, minute];
+	}
+
+	isOverlap(adate){
+		condition1 = this.timeStartFormatted < adate.timeStartFormatted && this.timeEndFormatted > adate.timeStartFormatted;
+		condition2 = this.timeStartFormatted < adate.timeEndFormatted && this.timeEndFormatted > adate.timeEndFormatted;
+		if (condition1 || condition2){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 }
 class Classes {
@@ -27,11 +47,27 @@ class Classes {
 		this.schedule = [];
 		for (var i = 0; i<schdle.length; i++){
 			if (schdle[i]){
-				this.schedule[i] = new _Date(schdle[i][0],schdle[i][1], schdle[i][2], schdle[i][3]);
+				this.schedule[i] = new _Date(schdle[i][0],schdle[i][1], schdle[i][2]); //TODO:change this to the appropriate format after knowing the database output
 			}
 		}
 		//this._hour = this._convertToHour(this.HMS);
 	}
+
+	isOverlap(aclass){
+		min = this.schedule.length;
+		max = aclass.schedule.length;
+		for(var i = 0; i < min; i++){
+			for (var j = 0; j < max; j++){
+				if (this.schedule[i].isOverlap(aclass.schedule[j])){
+					return true;
+				}
+				else {
+					return false;
+				}
+			}
+		}
+	}
+
 
 }
 
@@ -60,7 +96,7 @@ class Criteria {
 		}
 		else {
 			this.isBefore = true;
-			this.timeBefore = time; 
+			this.timeBefore = _Date(null, null, time); 
 		}
 
 	}
@@ -70,7 +106,7 @@ class Criteria {
 		}
 		else {
 			this.isAfter = true;
-			this.timeAfter = time;
+			this.timeAfter = _Date(null, time, null);
 		}
 	}
 	set less (info = null){ //info must be an array, date first, followed by time 
@@ -81,11 +117,11 @@ class Criteria {
 			this.isLess = false;
 		}
 		else {
-			this.dateLess = info[0];
+			this.dateLess = _Date(info[0], null, null);
 			this.numLess = info[1];
 		}
 	}
-	set chooseDate (info = null){ // info must be an array, date first, followed by date
+	set chooseDate (info = null){ // info must be an array, date first, followed by class
 		if (!info){
 			this.isChooseDate = false;
 		}
@@ -94,8 +130,8 @@ class Criteria {
 		}
 		else {
 			this.isChooseDate = true;
-			this.chooseDateClass = info[0];
-			this.chooseDate = info[1]; 
+			this.chooseDateClass = info[1];
+			this.chooseDate = _Date(info[0],null,null); 
 		}
 	}
 
@@ -103,24 +139,108 @@ class Criteria {
 }
 
 class Schedule {
-	constructor(){
+	constructor(validClass){
 		this.list = [];
+		this.possibleChoice = validClass;
 	}
-	_isOverlap(aclass){
-		for (var i = 0; i<this.list.length; i++){
-			
+	makeSchedule(){
+		pc = this.possibleChoice;
+		for (var i = 0; i < pc.length; i++){
 		}
 	}
+
 }
 
 class Catalog {
 	constructor(db){
 		this.database = [];
+		for (var i = 0; i < db.length; i++){
+			this.database[i] = new Classes(db[i][0], db[i][1], db[i][2]);
+		}
 
 	}
-	search(criteria){
+	search(name = null, crn = null, criteria = null){
+		
+		result = this.database;
+		if (name){
+			result = nameSearch(result, name);
+		}
+		if (crn){
+			result = crnSearch(result, crn);
+		}
+		if (criteria){
+			result = criteriaSearch(result, criteria);
+		}
+		return result;
+
+	}
+	nameSearch(list, nameList){
 		result = [];
+		for (var i = 0; i < list.length; i++){
+			if (list[i].name in nameList){
+				result.push(list[i]);
+			}
+		}
+		return result;
+	}
+	crnSearch(list, crnList){
+		result = [];
+		for (var i = 0; i < list.length; i++){
+			if (list[i].crnnum in crnList){
+				result.push(list[i]);
+			}
+		}
+	}
+	criteriaSearch(list, criteria){
+		result = [];
+		for (var i = 0; i < list.length; i++){
+			condition = true;
+			for (var j = 0; j < list[i].schedule.length; j++){
+				if (criteria.isBefore){
+					condition = condition && _isBeforeFilter(list[i].schedule[j], criteria.timeBefore);
+				}
+				if (criteria.isAfter){
+					condition = condition && _isAfterFilter(list[i].schedule[j], criteria.timeAfter);
+				}
+				if (!condition){
+					break;
+				}
+			}
+			if (isChooseDate){
+				condition = condition && _isExistDate(list[i], criteria);
+			}
+			if (condition){
+				result.push(list[i]);
+			}
 
+		}
+		return result;
 	}
 
-}
+	
+	_isBeforeFilter(item, criteria){
+		if (item.timeEndFormatted > criteria.timeEndFormatted){
+			return false;
+		}
+			return true;
+	}
+	_isAfterFilter(item, criteria){		
+		if (item.timeStartFormatted < criteria.timeStartFormatted){
+			return false;
+		}
+		return true;
+	}
+	_isExistDate(item, criteria){
+		if (item.name != criteria.chooseDateClass){
+			return true;
+		}
+		condition = false
+		for (var i = 0; i < item.schedule.length; i++){
+			if (item.schedule[i].date == criteria.chooseDate.date){
+				condition = true;
+			}
+		}
+		return false;
+	}
+} 
+
