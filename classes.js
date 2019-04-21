@@ -1,7 +1,23 @@
 class _Date {
-	constructor(dt, hr, min, sec){
+	constructor(dt, tStart, tEnd){
 		this.date = dt;
-		this.time = [hr, min, sec];
+		this.timeStart = this.formatTheTime(tStart);
+		this.timeEnd = this.formatTheTime(tEnd);
+		this.timeStartFormatted = this.convertToDecimal(timeStart);
+		this.timeEndFormatted = this.convertToDecimal(timeEnd);
+	}
+	
+	formatTheTime(string){
+		result = string.split(':');
+		for (var i = 0; i <result.length; i++){
+			result[i] = parseInt(result[i]);
+		}
+	}
+	convertToDecimal(time){
+		return hr + min/60 + sec/3600;
+	}
+	convertToNormalFormat(time){
+		return 0;
 	}
 }
 class Classes {
@@ -10,7 +26,9 @@ class Classes {
 		this.crn = crnnum;
 		this.schedule = [];
 		for (var i = 0; i<schdle.length; i++){
-			this.schedule[i] = new _Date(schdle[i][0],schdle[i][1], schdle[i][2], schdle[i][3]);
+			if (schdle[i]){
+				this.schedule[i] = new _Date(schdle[i][0],schdle[i][1], schdle[i][2], schdle[i][3]);
+			}
 		}
 		//this._hour = this._convertToHour(this.HMS);
 	}
@@ -86,7 +104,12 @@ class Criteria {
 
 class Schedule {
 	constructor(){
-		
+		this.list = [];
+	}
+	_isOverlap(aclass){
+		for (var i = 0; i<this.list.length; i++){
+			
+		}
 	}
 }
 
