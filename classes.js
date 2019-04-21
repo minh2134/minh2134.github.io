@@ -9,7 +9,7 @@
 //				- date (monday/tuesday/...)
 //				- start time (string hr:min 24h format)
 //				- end time (string hr:min 24h format)
-//			- day #2:
+//			- day #2:++
 //				- same as day 1
 //	- entry #2:
 //		- same as entry #1
@@ -160,11 +160,24 @@ class Schedule {
 		this.possibleChoice = validClass;
 	}
 	sortChoices(list){
-		result = [];
+		var result = [];
+		var usedClass = [];
 		//creates category
 		for (var i = 0; i<list.length; i++){
-			
+			if (list[i].name in usedClass){
+				for (var j = 0; j <result.length; i++){
+					if (result[i][0] == list[i].name){
+						result[i].push(list[i]);
+						break;
+					}
+				}
+			}
+			else {
+				result.push([list[i].name]);
+			}
+
 		}
+		return result;
 	}
 	makeSchedule(){
 		pc = this.possibleChoice;
@@ -173,6 +186,8 @@ class Schedule {
 	}
 	filterChoices(list, item){
 		
+	}
+	_isOverlap(list, item){
 	}
 
 }
