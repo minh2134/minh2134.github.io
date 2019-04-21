@@ -20,6 +20,7 @@ var scheduleData = function () {
         var course = the_data[i]["Course"];
         var title = the_data[i]["Title"];
         var dayTime = the_data[i]["Day&Time"];
+<<<<<<< HEAD
 
         //split dayTime into seperate variables
 
@@ -46,6 +47,18 @@ var scheduleData = function () {
             schedule[2] = timeEnd;
         } */
         console.log(date);
+=======
+        
+        //split dayTime into seperate variables
+        var day = dayTime.split(" ");
+        var timeStart = dayTime.split("-");
+        var timeEnd = dayTime.split("-");
+        
+        var instructor = the_data[i]["Instructor"];
+        var crn = the_data[i]["CRN"];
+        //console.log(course + " --- " + title + " --- " + dayTime + " --- " + instructor + " --- " + crn);
+        console.log(day + " --- " + timeStart + " --- " + timeEnd);
+>>>>>>> origin
 
     }
 };
@@ -75,14 +88,22 @@ var the_data = [
     {
         "Course": "As St 2011 (801)",
         "Title": "Survey of Japanese Literature before 1868",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Nagai, M.",
         "CRN": "40561"
     },
     {
         "Course": "IH 0852 (803)",
         "Title": "IH II: The Common Good",
+<<<<<<< HEAD
         "Day&Time": "TR\n8:40-10:10",
+=======
+        "Day&Time": "TTh\n8:40-10:10",
+>>>>>>> origin
         "Instructor": "Rosenkjar, P.",
         "CRN": "40681"
     },
@@ -117,14 +138,22 @@ var the_data = [
     {
         "Course": "Math 1031 (802)",
         "Title": "Differential and Integral Calculus",
+<<<<<<< HEAD
         "Day&Time": "TR\n17:30-19:30",
+=======
+        "Day&Time": "TTh\n17:30-19:30",
+>>>>>>> origin
         "Instructor": "Fonseca, J.",
         "CRN": "40501"
     },
     {
         "Course": "Art Hist 2644 (801)",
         "Title": "Modern Art: 1945 to the Present",
+<<<<<<< HEAD
         "Day&Time": "MWF\n12:40-14:00",
+=======
+        "Day&Time": "MWF 12:40-14:00",
+>>>>>>> origin
         "Instructor": "Nettleton, T.",
         "CRN": "40379"
     },
@@ -145,7 +174,11 @@ var the_data = [
     {
         "Course": "Am St 0862 (801)",
         "Title": "First Person America",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Clark, W.",
         "CRN": "40559"
     },
@@ -159,7 +192,11 @@ var the_data = [
     {
         "Course": "IH 0851 (806)",
         "Title": "IH I: The Good Life",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Mackin, Z.",
         "CRN": "40677"
     },
@@ -173,14 +210,22 @@ var the_data = [
     {
         "Course": "Japanese 2017 (801)",
         "Title": "Stories of Parents and Children in Japanese Literature and Film",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Nagai, M.",
         "CRN": "40564"
     },
     {
         "Course": "Psych 2502 (801)",
         "Title": "Foundations of Cognitive Neuroscience",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Tserolas, V.",
         "CRN": "40477"
     },
@@ -194,14 +239,22 @@ var the_data = [
     {
         "Course": "Pol Sci 2314 (801)",
         "Title": "Politics of International Law",
+<<<<<<< HEAD
         "Day&Time": "TR\n8:40-10:10",
+=======
+        "Day&Time": "TTh\n8:40-10:10",
+>>>>>>> origin
         "Instructor": "Bansal, V.",
         "CRN": "40662"
     },
     {
         "Course": "Theat 0825 (802)",
         "Title": "The Art of Acting",
+<<<<<<< HEAD
         "Day&Time": "TR\n17:30-19:00",
+=======
+        "Day&Time": "TTh\n17:30-19:00",
+>>>>>>> origin
         "Instructor": "Roberts, W.",
         "CRN": "40382"
     },
@@ -215,14 +268,22 @@ var the_data = [
     {
         "Course": "CSI 1111 (801)",
         "Title": "Introduction to Public Speaking",
+<<<<<<< HEAD
         "Day&Time": "TR\n17:30-19:00",
+=======
+        "Day&Time": "TTh\n17:30-19:00",
+>>>>>>> origin
         "Instructor": "Parham, C.",
         "CRN": "40384"
     },
     {
         "Course": "Art 3813 (802)",
         "Title": "Advanced Art Photography: Digital",
+<<<<<<< HEAD
         "Day&Time": "MW\n14:10-16:40",
+=======
+        "Day&Time": "MW 14:10-16:40",
+>>>>>>> origin
         "Instructor": "Watanabe, S.",
         "CRN": "42003"
     },
@@ -243,14 +304,22 @@ var the_data = [
     {
         "Course": "Art 2301 (802)",
         "Title": "Relief Printmaking",
+<<<<<<< HEAD
         "Day&Time": "TR\n9:20-11:50",
+=======
+        "Day&Time": "TTh\n9:20-11:50",
+>>>>>>> origin
         "Instructor": "Wilds, K.",
         "CRN": "40587"
     },
     {
         "Course": "Mktg 2101 (801)",
         "Title": "Marketing Management",
+<<<<<<< HEAD
         "Day&Time": "TR\n8:40-10:10",
+=======
+        "Day&Time": "TTh\n8:40-10:10",
+>>>>>>> origin
         "Instructor": "Singh, M.",
         "CRN": "40496"
     },
@@ -285,28 +354,44 @@ var the_data = [
     {
         "Course": "Bridge 0800 (801)",
         "Title": "General Education Support",
+<<<<<<< HEAD
         "Day&Time": "TR\n8:40-10:10",
+=======
+        "Day&Time": "TTh\n8:40-10:10",
+>>>>>>> origin
         "Instructor": "Staff, T.",
         "CRN": "B800A"
     },
     {
         "Course": "As St 2511 (801)",
         "Title": "Introduction to Asian Business",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Staff, T.",
         "CRN": "40485"
     },
     {
         "Course": "GUS 0831 (801)",
         "Title": "Global Cities",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Bansal, B.",
         "CRN": "40688"
     },
     {
         "Course": "Art 1201 (803)",
         "Title": "Introduction to Visual Language: 3-D Design",
+<<<<<<< HEAD
         "Day&Time": "WF\n14:10-16:40",
+=======
+        "Day&Time": "WF 14:10-16:40",
+>>>>>>> origin
         "Instructor": "Staff, T.",
         "CRN": "40576"
     },
@@ -327,14 +412,22 @@ var the_data = [
     {
         "Course": "Art 4796 (801)",
         "Title": "Art Seminar",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-18:20",
+=======
+        "Day&Time": "TTh 15:50-18:20",
+>>>>>>> origin
         "Instructor": "Watanabe, S. & Kubota, T.",
         "CRN": "40606"
     },
     {
         "Course": "Bridge 0400 (802)",
         "Title": "Bridge Tutorial",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:10",
+=======
+        "Day&Time": "TTh\n13:40-15:10",
+>>>>>>> origin
         "Instructor": "Staff, T.",
         "CRN": "B400B"
     },
@@ -348,7 +441,11 @@ var the_data = [
     {
         "Course": "Art 1401 (803)",
         "Title": "Introduction to Visual Language: Drawing",
+<<<<<<< HEAD
         "Day&Time": "TR\n9:20-11:50",
+=======
+        "Day&Time": "TTh\n9:20-11:50",
+>>>>>>> origin
         "Instructor": "Staff, T.",
         "CRN": "40603"
     },
@@ -369,14 +466,22 @@ var the_data = [
     {
         "Course": "Art Hist 2096 (801)",
         "Title": "Art History Writing Intensive: Eurasia: Connecting European and Asian Art and Culture",
+<<<<<<< HEAD
         "Day&Time": "TR\n17:30-19:30",
+=======
+        "Day&Time": "TTh\n17:30-19:30",
+>>>>>>> origin
         "Instructor": "Watanabe, S.",
         "CRN": "40458"
     },
     {
         "Course": "Pol Sci 0866 (801)",
         "Title": "World Affairs",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Ono, K.",
         "CRN": "40656"
     },
@@ -397,7 +502,11 @@ var the_data = [
     {
         "Course": "As St 3541 (801)",
         "Title": "Japan Today",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:10",
+=======
+        "Day&Time": "TTh\n13:40-15:10",
+>>>>>>> origin
         "Instructor": "Kingston, J.",
         "CRN": "40465"
     },
@@ -411,7 +520,11 @@ var the_data = [
     {
         "Course": "Art 4249 (801)",
         "Title": "3-D Portfolio",
+<<<<<<< HEAD
         "Day&Time": "WF\n16:50-19:20",
+=======
+        "Day&Time": "WF 16:50-19:20",
+>>>>>>> origin
         "Instructor": "Staff, T.",
         "CRN": "40579"
     },
@@ -446,7 +559,11 @@ var the_data = [
     {
         "Course": "Art 4849 (802)",
         "Title": "Art Photography Portfolio",
+<<<<<<< HEAD
         "Day&Time": "TR\n9:20-11:50",
+=======
+        "Day&Time": "TTh 9:20-11:50",
+>>>>>>> origin
         "Instructor": "Sakurai, K. & Lynam, I.",
         "CRN": "40635"
     },
@@ -488,7 +605,11 @@ var the_data = [
     {
         "Course": "Psych 3620 (801)",
         "Title": "Topics in Psychology: Prejudice and Discrimination in Japan",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Htun, T.",
         "CRN": "40479"
     },
@@ -509,21 +630,33 @@ var the_data = [
     {
         "Course": "As St 3000 (802)",
         "Title": "Special Topics in Asian Studies II: Korean Politics",
+<<<<<<< HEAD
         "Day&Time": "TR\n17:30-19:00",
+=======
+        "Day&Time": "TTh\n17:30-19:00",
+>>>>>>> origin
         "Instructor": "Satterwhite, D.",
         "CRN": "40646"
     },
     {
         "Course": "Econ 3547 (801)",
         "Title": "Economics of Development and Growth",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Bansal, B.",
         "CRN": "40531"
     },
     {
         "Course": "Art 4348 (801)",
         "Title": "Printmaking Workshop",
+<<<<<<< HEAD
         "Day&Time": "TR\n9:20-11:50",
+=======
+        "Day&Time": "TTh 9:20-11:50",
+>>>>>>> origin
         "Instructor": "Sakurai, K. & Lynam, I.",
         "CRN": "40628"
     },
@@ -544,56 +677,89 @@ var the_data = [
     {
         "Course": "Art 2102 (801)",
         "Title": "Intermediate Painting",
+<<<<<<< HEAD
         "Day&Time": "MW\n14:10-16:40",
+=======
+        "Day&Time": "MW 14:10-16:40",
+>>>>>>> origin
         "Instructor": "Sakurai, K.",
         "CRN": "40591"
     },
     {
         "Course": "Jour 3701 (801)",
+<<<<<<< HEAD
         "Title": "Contemporary Media Issues: Journalism and Japan's Geopolitical Impact on The World",
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Title": "Contemporary Media Issues: Journalism and Japan's Geopolitical Impact on the World",
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Murakami, Y.",
         "CRN": "40385"
     },
     {
         "Course": "As St 3247 (801)",
         "Title": "Ideology and Social Change in Japan",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Cleveland, K.",
         "CRN": "40670"
     },
     {
         "Course": "Japanese 2003 (801)",
         "Title": "Oral Intensive Japanese II: Oral Intensive II",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Okada, C.",
         "CRN": "40321"
     },
     {
         "Course": "Econ 0858 (801)",
         "Title": "The American Economy",
+<<<<<<< HEAD
         "Day&Time": "TR\n8:40-10:10",
+=======
+        "Day&Time": "TTh\n8:40-10:10",
+>>>>>>> origin
         "Instructor": "Ofori, S.",
         "CRN": "40520"
     },
     {
         "Course": "Art 4849 (804)",
         "Title": "Art Photography Portfolio",
+<<<<<<< HEAD
         "Day&Time": "MW\n14:10-16:40",
+=======
+        "Day&Time": "MW 14:10-16:40",
+>>>>>>> origin
         "Instructor": "Watanabe, S.",
         "CRN": "42006"
     },
     {
         "Course": "Psych 1001 (801)",
         "Title": "Introduction to Psychology",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Yamamiya, Y.",
         "CRN": "40469"
     },
     {
         "Course": "IBS 4596 (801)",
         "Title": "International Business Capstone",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Swinton, W.",
         "CRN": "40518"
     },
@@ -607,7 +773,11 @@ var the_data = [
     {
         "Course": "IH 0851 (805)",
         "Title": "IH I: The Good Life",
+<<<<<<< HEAD
         "Day&Time": "TR\n8:40-10:10",
+=======
+        "Day&Time": "TTh\n8:40-10:10",
+>>>>>>> origin
         "Instructor": "Mackin, Z.",
         "CRN": "40676"
     },
@@ -621,7 +791,11 @@ var the_data = [
     {
         "Course": "Art 4448 (801)",
         "Title": "Drawing Workshop",
+<<<<<<< HEAD
         "Day&Time": "TR\n9:20-11:50",
+=======
+        "Day&Time": "TTh 9:20-11:50",
+>>>>>>> origin
         "Instructor": "Sakurai, K. & Lynam, I.",
         "CRN": "40630"
     },
@@ -642,7 +816,11 @@ var the_data = [
     {
         "Course": "Econ 1101 (802)",
         "Title": "Macroeconomic Principles",
+<<<<<<< HEAD
         "Day&Time": "TR\n17:30-19:00",
+=======
+        "Day&Time": "TTh\n17:30-19:00",
+>>>>>>> origin
         "Instructor": "Staff, T.",
         "CRN": "40522"
     },
@@ -656,21 +834,33 @@ var the_data = [
     {
         "Course": "Pol Sci 1201 (801)",
         "Title": "Foreign Governments and Politics",
+<<<<<<< HEAD
         "Day&Time": "TR\n8:40-10:10",
+=======
+        "Day&Time": "TTh\n8:40-10:10",
+>>>>>>> origin
         "Instructor": "Kakizaki, M.",
         "CRN": "40661"
     },
     {
         "Course": "Japanese 4296 (801)",
         "Title": "Seminar in Japanese and Japan: Business",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Matsuhashi, Y.",
         "CRN": "40339"
     },
     {
         "Course": "Art 4849 (803)",
         "Title": "Art Photography Portfolio",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:10-15:40",
+=======
+        "Day&Time": "TTh 13:10-15:40",
+>>>>>>> origin
         "Instructor": "Tsai, P.",
         "CRN": "42002"
     },
@@ -684,7 +874,11 @@ var the_data = [
     {
         "Course": "Korean 2001 (801)",
         "Title": "Korean Intermediate I",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Park, K.",
         "CRN": "40304"
     },
@@ -698,35 +892,55 @@ var the_data = [
     {
         "Course": "Econ 3408 (801)",
         "Title": "Economics for Life",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:10",
+=======
+        "Day&Time": "TTh\n13:40-15:10",
+>>>>>>> origin
         "Instructor": "Ofori, S.",
         "CRN": "40526"
     },
     {
         "Course": "Art 1101 (802)",
         "Title": "Introduction to Visual Language: Painting",
+<<<<<<< HEAD
         "Day&Time": "MW\n8:50-11:20",
+=======
+        "Day&Time": "MW 8:50-11:20",
+>>>>>>> origin
         "Instructor": "Sakurai, K.",
         "CRN": "40590"
     },
     {
         "Course": "Art 2351 (801)",
         "Title": "Artist Books, Zines and Independent Publishing",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:10-15:40",
+=======
+        "Day&Time": "TTh\n13:10-15:40",
+>>>>>>> origin
         "Instructor": "Wilds, K.",
         "CRN": "40588"
     },
     {
         "Course": "Biol 0848 (801)",
         "Title": "DNA: Friend or Foe",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Hornia, A.",
         "CRN": "40685"
     },
     {
         "Course": "Engl 0802 (802)",
         "Title": "Analytical Reading and Writing",
+<<<<<<< HEAD
         "Day&Time": "TR\n8:10-10:10",
+=======
+        "Day&Time": "TTh\n8:10-10:10",
+>>>>>>> origin
         "Instructor": "Arnold, S.",
         "CRN": "40342"
     },
@@ -754,7 +968,11 @@ var the_data = [
     {
         "Course": "Psych 2401 (801)",
         "Title": "Foundations of Social Psychology",
+<<<<<<< HEAD
         "Day&Time": "MWF\n14:10-15:10",
+=======
+        "Day&Time": "MWF 14:10-15:10",
+>>>>>>> origin
         "Instructor": "Zimmerman, S.",
         "CRN": "42061"
     },
@@ -768,28 +986,44 @@ var the_data = [
     {
         "Course": "Math 0823 (801)",
         "Title": "Math for a Digital World",
+<<<<<<< HEAD
         "Day&Time": "TR\n17:30-19:30",
+=======
+        "Day&Time": "TTh\n17:30-19:30",
+>>>>>>> origin
         "Instructor": "Bedard, B.",
         "CRN": "40506"
     },
     {
         "Course": "MSP 4153 (801)",
         "Title": "Media Criticism",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Fujiwara, C.",
         "CRN": "40387"
     },
     {
         "Course": "Art 4648 (801)",
         "Title": "Computer Imaging Workshop",
+<<<<<<< HEAD
         "Day&Time": "TR 9:20-11:50",
+=======
+        "Day&Time": "TTh 9:20-11:50",
+>>>>>>> origin
         "Instructor": "Sakurai, K. & Lynam, I.",
         "CRN": "40632"
     },
     {
         "Course": "Jour 3403 (801)",
         "Title": "Documentary Photography",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Miller, G.",
         "CRN": "41100"
     },
@@ -803,7 +1037,11 @@ var the_data = [
     {
         "Course": "Hist 0834 (801)",
         "Title": "Representing Race",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Mock, J.",
         "CRN": "40695"
     },
@@ -831,7 +1069,11 @@ var the_data = [
     {
         "Course": "Art 4349 (802)",
         "Title": "Printmaking Portfolio",
+<<<<<<< HEAD
         "Day&Time": "TR 9:20-11:50",
+=======
+        "Day&Time": "TTh 9:20-11:50",
+>>>>>>> origin
         "Instructor": "Sakurai, K. & Lynam, I.",
         "CRN": "40629"
     },
@@ -845,7 +1087,11 @@ var the_data = [
     {
         "Course": "Lib Arts 1002 (801)",
         "Title": "Professional Development for Liberal Arts Majors",
+<<<<<<< HEAD
         "Day&Time": "R\n18:00-18:55",
+=======
+        "Day&Time": "Th\n18:00-18:55",
+>>>>>>> origin
         "Instructor": "Sawa, K. & Adams, E.",
         "CRN": "40508"
     },
@@ -859,7 +1105,11 @@ var the_data = [
     {
         "Course": "As St 2017 (801)",
         "Title": "Stories of Parents and Children in Japanese Literature and Film",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Nagai, M.",
         "CRN": "40563"
     },
@@ -901,21 +1151,33 @@ var the_data = [
     {
         "Course": "Art 2812 (802)",
         "Title": "Intermediate Art Photography: Digital",
+<<<<<<< HEAD
         "Day&Time": "TR 13:10-15:40",
+=======
+        "Day&Time": "TTh 13:10-15:40",
+>>>>>>> origin
         "Instructor": "Tsai, P.",
         "CRN": "40612"
     },
     {
         "Course": "Art 2202 (802)",
         "Title": "Intermediate 3-D",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-18:20",
+=======
+        "Day&Time": "TTh\n15:50-18:20",
+>>>>>>> origin
         "Instructor": "Kirkham, J.",
         "CRN": "40580"
     },
     {
         "Course": "Hist 1702 (801)",
         "Title": "World History: Modern",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Tyner, C.",
         "CRN": "40650"
     },
@@ -936,35 +1198,55 @@ var the_data = [
     {
         "Course": "Comm St 2111 (801)",
         "Title": "Communications Seminar",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Carr, R.",
         "CRN": "40394"
     },
     {
         "Course": "Engl 0802 (801)",
         "Title": "Analytical Reading and Writing",
+<<<<<<< HEAD
         "Day&Time": "TR\n17:30-19:30",
+=======
+        "Day&Time": "TTh\n17:30-19:30",
+>>>>>>> origin
         "Instructor": "Chozick, M.",
         "CRN": "40341"
     },
     {
         "Course": "Art Hist 3302 (801)",
         "Title": "Women and Art",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "MacDonald, D.",
         "CRN": "40380"
     },
     {
         "Course": "Art 4249 (803)",
         "Title": "3-D Portfolio",
+<<<<<<< HEAD
         "Day&Time": "TR 9:20-11:50",
+=======
+        "Day&Time": "TTh 9:20-11:50",
+>>>>>>> origin
         "Instructor": "Sakurai, K. & Lynam, I.",
         "CRN": "40627"
     },
     {
         "Course": "As St 2373 (801)",
         "Title": "Japanese Culture",
+<<<<<<< HEAD
         "Day&Time": "TR\n8:40-10:10",
+=======
+        "Day&Time": "TTh\n8:40-10:10",
+>>>>>>> origin
         "Instructor": "Mock, J.",
         "CRN": "40697"
     },
@@ -985,14 +1267,22 @@ var the_data = [
     {
         "Course": "Art 1201 (802)",
         "Title": "Introduction to Visual Language: 3-D Design",
+<<<<<<< HEAD
         "Day&Time": "TR 9:20-11:50",
+=======
+        "Day&Time": "TTh 9:20-11:50",
+>>>>>>> origin
         "Instructor": "Kirkham, J.",
         "CRN": "40575"
     },
     {
         "Course": "Pol Sci 2503 (801)",
         "Title": "Evidence and Knowledge",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Kakizaki, M.",
         "CRN": "40658"
     },
@@ -1006,7 +1296,11 @@ var the_data = [
     {
         "Course": "Hist 3229 (801)",
         "Title": "Superpower America",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Kingston, J.",
         "CRN": "40464"
     },
@@ -1041,14 +1335,22 @@ var the_data = [
     {
         "Course": "As St 3076 (801)",
         "Title": "Metropolitan Tokyo",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:10",
+=======
+        "Day&Time": "TTh\n13:40-15:10",
+>>>>>>> origin
         "Instructor": "Bansal, B.",
         "CRN": "40689"
     },
     {
         "Course": "Pol Sci 3203 (801)",
         "Title": "Comparative Politics of Democratization",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "MacDougall, T.",
         "CRN": "40657"
     },
@@ -1062,35 +1364,55 @@ var the_data = [
     {
         "Course": "Pol Sci 3520 (801)",
         "Title": "Special Topics: Research Preparation Seminar: Korean Politics",
+<<<<<<< HEAD
         "Day&Time": "TR\n17:30-19:00",
+=======
+        "Day&Time": "TTh\n17:30-19:00",
+>>>>>>> origin
         "Instructor": "Satterwhite, D.",
         "CRN": "40647"
     },
     {
         "Course": "Art 3203 (802)",
         "Title": "Advanced 3-D",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-18:20",
+=======
+        "Day&Time": "TTh\n15:50-18:20",
+>>>>>>> origin
         "Instructor": "Kirkham, J.",
         "CRN": "40581"
     },
     {
         "Course": "Engl 0802 (803)",
         "Title": "Analytical Reading and Writing",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:40",
+=======
+        "Day&Time": "TTh\n13:40-15:40",
+>>>>>>> origin
         "Instructor": "Arnold, S.",
         "CRN": "40343"
     },
     {
         "Course": "Art 4449 (803)",
         "Title": "Drawing Portfolio",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:10-15:40",
+=======
+        "Day&Time": "TTh\n13:10-15:40",
+>>>>>>> origin
         "Instructor": "Kirkham, J.",
         "CRN": "40624"
     },
     {
         "Course": "Bridge 0600 (801)",
         "Title": "Workshop for Foundations of Academic Writing",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Staff, T.",
         "CRN": "B600A"
     },
@@ -1111,7 +1433,11 @@ var the_data = [
     {
         "Course": "Art 2835 (801)",
         "Title": "Art Photography: Moving Image",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:10-15:40",
+=======
+        "Day&Time": "TTh\n13:10-15:40",
+>>>>>>> origin
         "Instructor": "Lynam, I.",
         "CRN": "40607"
     },
@@ -1153,7 +1479,11 @@ var the_data = [
     {
         "Course": "Japanese 2011 (801)",
         "Title": "Survey of Japanese Literature: Pre-Modern",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Nagai, M.",
         "CRN": "40562"
     },
@@ -1167,14 +1497,22 @@ var the_data = [
     {
         "Course": "MSP 4701 (801)",
         "Title": "Producing and Directing",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:40",
+=======
+        "Day&Time": "TTh\n13:40-15:40",
+>>>>>>> origin
         "Instructor": "Neubert, K.",
         "CRN": "40396"
     },
     {
         "Course": "Japanese 2000 (801)",
         "Title": "Special Topics I: Practical Japanese for Study Abroad Students",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Matsuhashi, Y.",
         "CRN": "40319"
     },
@@ -1188,14 +1526,22 @@ var the_data = [
     {
         "Course": "IH 0851 (804)",
         "Title": "IH I: The Good Life",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Rosenkjar, P.",
         "CRN": "40675"
     },
     {
         "Course": "Psych 3620 (802)",
         "Title": "Topics in Psychology: Intercultural Marriage",
+<<<<<<< HEAD
         "Day&Time": "TR\n17:30-19:00",
+=======
+        "Day&Time": "TTh\n17:30-19:00",
+>>>>>>> origin
         "Instructor": "Morsbach, H.",
         "CRN": "40481"
     },
@@ -1209,14 +1555,22 @@ var the_data = [
     {
         "Course": "Econ 1102 (802)",
         "Title": "Microeconomic Principles",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Iniguez, A.",
         "CRN": "40524"
     },
     {
         "Course": "Psych 0825 (801)",
         "Title": "Quantitative Methods in the Social Sciences",
+<<<<<<< HEAD
         "Day&Time": "TR\n8:10-10:10",
+=======
+        "Day&Time": "TTh\n8:10-10:10",
+>>>>>>> origin
         "Instructor": "Joyce, T.",
         "CRN": "40468"
     },
@@ -1230,7 +1584,11 @@ var the_data = [
     {
         "Course": "As St 4096 (802)",
         "Title": "Writing Seminar in Asian Studies: Immigration and Integration Issues in East and Southeast Asia",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "MacDougall, T.",
         "CRN": "40654"
     },
@@ -1244,7 +1602,11 @@ var the_data = [
     {
         "Course": "Japanese 2000 (802)",
         "Title": "Special Topics I: Practical Japanese for Study Abroad Students",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Matsuhashi, Y.",
         "CRN": "40320"
     },
@@ -1265,7 +1627,11 @@ var the_data = [
     {
         "Course": "Engl 2007 (801)",
         "Title": "Writing for Business and Industry",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Staff, T.",
         "CRN": "40513"
     },
@@ -1279,21 +1645,33 @@ var the_data = [
     {
         "Course": "MSP 2421 (801)",
         "Title": "Media Popular Culture",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Neubert, K.",
         "CRN": "40397"
     },
     {
         "Course": "GUS 2074 (801)",
         "Title": "East and South Asia",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Mock, J.",
         "CRN": "41099"
     },
     {
         "Course": "Pol Sci 2341 (801)",
         "Title": "U.S. Foreign Policy",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Moskowitz, K.",
         "CRN": "40651"
     },
@@ -1307,35 +1685,55 @@ var the_data = [
     {
         "Course": "Pol Sci 4896 (801)",
         "Title": "Capstone Seminar in Political Science: Foreign Policy Analysis",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Brown, J.",
         "CRN": "40655"
     },
     {
         "Course": "Lib Arts 2030 (801)",
         "Title": "Special Topics in Liberal Arts III: Technology in International Business",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Singh, M.",
         "CRN": "40512"
     },
     {
         "Course": "Leg St 0803 (801)",
         "Title": "African Americans, Equality and the Law: Weapon or Tool?",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Staff, T.",
         "CRN": "40519"
     },
     {
         "Course": "Pol Sci 3510 (801)",
         "Title": "Special Topics: Research Preparation Seminar: Japan's International Relations",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Brown, J.",
         "CRN": "40660"
     },
     {
         "Course": "Psych 4696 (801)",
         "Title": "Capstone in Psychology: Cross-Cultural Themes in Psychology",
+<<<<<<< HEAD
         "Day&Time": "TR\n14:10-15:40",
+=======
+        "Day&Time": "TTh\n14:10-15:40",
+>>>>>>> origin
         "Instructor": "Skowronski, D.",
         "CRN": "40482"
     },
@@ -1349,14 +1747,22 @@ var the_data = [
     {
         "Course": "Psych 3223 (801)",
         "Title": "Child Psychopathology and Treatment",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Bertram, F.",
         "CRN": "40478"
     },
     {
         "Course": "Pol Sci 0862 (801)",
         "Title": "Development & Globalization",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Blue, P.",
         "CRN": "40653"
     },
@@ -1391,7 +1797,11 @@ var the_data = [
     {
         "Course": "Art Hist 1156 (801)",
         "Title": "Art Heritage Western World II",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "MacDonald, D.",
         "CRN": "40401"
     },
@@ -1412,7 +1822,11 @@ var the_data = [
     {
         "Course": "Psych 2103 (801)",
         "Title": "Foundations of Learning and Behavior Analysis",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Skowronski, D.",
         "CRN": "40475"
     },
@@ -1426,7 +1840,11 @@ var the_data = [
     {
         "Course": "Econ 3537 (801)",
         "Title": "Comparative Economic Systems",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Ofori, S.",
         "CRN": "40525"
     },
@@ -1440,21 +1858,33 @@ var the_data = [
     {
         "Course": "Hist 0849 (801)",
         "Title": "Dissent in America",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:10",
+=======
+        "Day&Time": "TTh\n13:40-15:10",
+>>>>>>> origin
         "Instructor": "Clark, W.",
         "CRN": "40560"
     },
     {
         "Course": "Hist 3541 (801)",
         "Title": "Japan Today",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:10",
+=======
+        "Day&Time": "TTh\n13:40-15:10",
+>>>>>>> origin
         "Instructor": "Kingston, J.",
         "CRN": "40466"
     },
     {
         "Course": "As St 4096 (801)",
         "Title": "Writing Seminar in Asian Studies: The Japanese Occupation of Southeast Asia",
+<<<<<<< HEAD
         "Day&Time": "TR\n17:30-19:00",
+=======
+        "Day&Time": "TTh\n17:30-19:00",
+>>>>>>> origin
         "Instructor": "Kingston, J.",
         "CRN": "40463"
     },
@@ -1475,7 +1905,11 @@ var the_data = [
     {
         "Course": "Pol Sci 2321 (801)",
         "Title": "Politics of the Global Economy",
+<<<<<<< HEAD
         "Day&Time": "TR\n17:30-19:00",
+=======
+        "Day&Time": "TTh\n17:30-19:00",
+>>>>>>> origin
         "Instructor": "Gupta, P.",
         "CRN": "40648"
     },
@@ -1489,7 +1923,11 @@ var the_data = [
     {
         "Course": "Art 2402 (802)",
         "Title": "Intermediate Drawing",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:10-15:40",
+=======
+        "Day&Time": "TTh\n13:10-15:40",
+>>>>>>> origin
         "Instructor": "Kirkham, J.",
         "CRN": "40622"
     },
@@ -1517,21 +1955,33 @@ var the_data = [
     {
         "Course": "Art 3403 (802)",
         "Title": "Advanced Drawing",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:10-15:40",
+=======
+        "Day&Time": "TTh\n13:10-15:40",
+>>>>>>> origin
         "Instructor": "Kirkham, J.",
         "CRN": "40623"
     },
     {
         "Course": "Jour 3704 (801)",
         "Title": "Ethical Issues in Journalism",
+<<<<<<< HEAD
         "Day&Time": "TR\n17:30-19:00",
+=======
+        "Day&Time": "TTh\n17:30-19:00",
+>>>>>>> origin
         "Instructor": "Jefferson, R.",
         "CRN": "40388"
     },
     {
         "Course": "Engl 0815 (801)",
         "Title": "Language in Society",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:10",
+=======
+        "Day&Time": "TTh\n13:40-15:10",
+>>>>>>> origin
         "Instructor": "Rosenkjar, P.",
         "CRN": "40692"
     },
@@ -1545,7 +1995,11 @@ var the_data = [
     {
         "Course": "Art Hist 2800 (801)",
         "Title": "Topics in Non-Western Art: Japanese Art Before and After WWII: From Manga to Performance Art",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:40",
+=======
+        "Day&Time": "TTh\n13:40-15:40",
+>>>>>>> origin
         "Instructor": "Watanabe, S.",
         "CRN": "40456"
     },
@@ -1559,14 +2013,22 @@ var the_data = [
     {
         "Course": "Acct 2101 (801)",
         "Title": "Financial Accounting",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Sigaty, D.",
         "CRN": "40483"
     },
     {
         "Course": "Acct 2102 (801)",
         "Title": "Managerial Accounting",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:10",
+=======
+        "Day&Time": "TTh\n13:40-15:10",
+>>>>>>> origin
         "Instructor": "Sigaty, D.",
         "CRN": "40484"
     },
@@ -1601,14 +2063,22 @@ var the_data = [
     {
         "Course": "Engl 0711 (801)",
         "Title": "Introduction to Academic Discourse ESL",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:40",
+=======
+        "Day&Time": "TTh\n13:40-15:40",
+>>>>>>> origin
         "Instructor": "Matsuno, M.",
         "CRN": "40344"
     },
     {
         "Course": "Biol 1001 (801)",
         "Title": "Human Biology",
+<<<<<<< HEAD
         "Day&Time": "TR\n17:30-19:30",
+=======
+        "Day&Time": "TTh\n17:30-19:30",
+>>>>>>> origin
         "Instructor": "Hornia, A.",
         "CRN": "40686"
     },
@@ -1622,14 +2092,22 @@ var the_data = [
     {
         "Course": "Jour 2101 (801)",
         "Title": "Journalism Research",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Carr, R.",
         "CRN": "40395"
     },
     {
         "Course": "Art 2601 (802)",
         "Title": "Computer Imaging",
+<<<<<<< HEAD
         "Day&Time": "TR\n9:20-11:50",
+=======
+        "Day&Time": "TTh\n9:20-11:50",
+>>>>>>> origin
         "Instructor": "Tsai, P.",
         "CRN": "40615"
     },
@@ -1650,7 +2128,11 @@ var the_data = [
     {
         "Course": "Soc 0829 (801)",
         "Title": "The History & Significance of Race in America",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Cleveland, K.",
         "CRN": "40691"
     },
@@ -1671,7 +2153,11 @@ var the_data = [
     {
         "Course": "Hist 0832 (801)",
         "Title": "Politics of Identity in America",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:10",
+=======
+        "Day&Time": "TTh\n13:40-15:10",
+>>>>>>> origin
         "Instructor": "Williams, M.",
         "CRN": "40565"
     },
@@ -1699,7 +2185,11 @@ var the_data = [
     {
         "Course": "As St 2074 (801)",
         "Title": "Geography of East and South Asia",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Mock, J.",
         "CRN": "41098"
     },
@@ -1713,7 +2203,11 @@ var the_data = [
     {
         "Course": "TUJ 1002 (801)",
         "Title": "TUJ Bridge Seminar 2: Academic Research for International Students",
+<<<<<<< HEAD
         "Day&Time": "R\n17:30-19:20",
+=======
+        "Day&Time": "Th\n17:30-19:20",
+>>>>>>> origin
         "Instructor": "Staff, T.",
         "CRN": "40667"
     },
@@ -1790,14 +2284,22 @@ var the_data = [
     {
         "Course": "Japanese 4002 (801)",
         "Title": "Japanese Advanced IV",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Saito, J.",
         "CRN": "40338"
     },
     {
         "Course": "RMI 2101 (801)",
         "Title": "Introduction to Risk Management",
+<<<<<<< HEAD
         "Day&Time": "TR\n8:40-10:10",
+=======
+        "Day&Time": "TTh\n8:40-10:10",
+>>>>>>> origin
         "Instructor": "Staff, T.",
         "CRN": "40495"
     },
@@ -1818,14 +2320,22 @@ var the_data = [
     {
         "Course": "As St 3030 (802)",
         "Title": "Special Topics III: Japan's International Relations",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Brown, J.",
         "CRN": "40659"
     },
     {
         "Course": "IBS 3501 (801)",
         "Title": "Marketing in a Global Environment",
+<<<<<<< HEAD
         "Day&Time": "TR\n8:40-10:10",
+=======
+        "Day&Time": "TTh\n8:40-10:10",
+>>>>>>> origin
         "Instructor": "Staff, T.",
         "CRN": "40516"
     },
@@ -1846,21 +2356,33 @@ var the_data = [
     {
         "Course": "Pol Sci 3151 (801)",
         "Title": "Public Policy Analysis",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Murakami, H.",
         "CRN": "40649"
     },
     {
         "Course": "Anthro 2373 (801)",
         "Title": "Japanese Culture",
+<<<<<<< HEAD
         "Day&Time": "TR\n8:40-10:10",
+=======
+        "Day&Time": "TTh\n8:40-10:10",
+>>>>>>> origin
         "Instructor": "Mock, J.",
         "CRN": "40696"
     },
     {
         "Course": "Bridge 0400 (801)",
         "Title": "Bridge Tutorial",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Staff, T.",
         "CRN": "B400A"
     },
@@ -1888,14 +2410,22 @@ var the_data = [
     {
         "Course": "Japanese 1003 (801)",
         "Title": "Beginning Oral Japanese: Oral Intensive I",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Okada, C.",
         "CRN": "40317"
     },
     {
         "Course": "Art 2811 (803)",
         "Title": "Art Photography: Digital",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:10-15:40",
+=======
+        "Day&Time": "TTh\n13:10-15:40",
+>>>>>>> origin
         "Instructor": "Watanabe, S.",
         "CRN": "40613"
     },
@@ -1916,7 +2446,11 @@ var the_data = [
     {
         "Course": "Hist 2103 (801)",
         "Title": "African American History to 1865",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Williams, M.",
         "CRN": "40566"
     },
@@ -1944,7 +2478,11 @@ var the_data = [
     {
         "Course": "Econ 3563 (801)",
         "Title": "International Trade",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:10",
+=======
+        "Day&Time": "TTh\n13:40-15:10",
+>>>>>>> origin
         "Instructor": "Iniguez, A.",
         "CRN": "40532"
     },
@@ -1972,7 +2510,11 @@ var the_data = [
     {
         "Course": "Art 4249 (802)",
         "Title": "3-D Portfolio",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-18:20",
+=======
+        "Day&Time": "TTh\n15:50-18:20",
+>>>>>>> origin
         "Instructor": "Kirkham, J.",
         "CRN": "40582"
     },
@@ -1986,21 +2528,33 @@ var the_data = [
     {
         "Course": "Korean 1001 (801)",
         "Title": "Korean Elements I",
+<<<<<<< HEAD
         "Day&Time": "TR\n17:30-19:30",
+=======
+        "Day&Time": "TTh\n17:30-19:30",
+>>>>>>> origin
         "Instructor": "Park, K.",
         "CRN": "40302"
     },
     {
         "Course": "Soc 3247 (801)",
         "Title": "Ideology and Social Change in Japan",
+<<<<<<< HEAD
         "Day&Time": "TR\n12:00-13:30",
+=======
+        "Day&Time": "TTh\n12:00-13:30",
+>>>>>>> origin
         "Instructor": "Cleveland, K.",
         "CRN": "40671"
     },
     {
         "Course": "Psych 2301 (801)",
         "Title": "Foundations of Developmental Psychology",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:10",
+=======
+        "Day&Time": "TTh\n13:40-15:10",
+>>>>>>> origin
         "Instructor": "Yamamiya, Y.",
         "CRN": "40476"
     },
@@ -2021,14 +2575,22 @@ var the_data = [
     {
         "Course": "Engl 0701 (801)",
         "Title": "Introduction to Academic Discourse",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:40",
+=======
+        "Day&Time": "TTh\n13:40-15:40",
+>>>>>>> origin
         "Instructor": "Chozick, M.",
         "CRN": "40340"
     },
     {
         "Course": "Pol Sci 4320 (801)",
         "Title": "Seminar in International Politics: Eurasian Politics: The International Affairs of Russia, Central Asia, and the Caucasus",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:10",
+=======
+        "Day&Time": "TTh\n13:40-15:10",
+>>>>>>> origin
         "Instructor": "Brown, J.",
         "CRN": "40652"
     },
@@ -2070,7 +2632,11 @@ var the_data = [
     {
         "Course": "Psych 0818 (801)",
         "Title": "Human Sexuality",
+<<<<<<< HEAD
         "Day&Time": "TR\n10:20-11:50",
+=======
+        "Day&Time": "TTh\n10:20-11:50",
+>>>>>>> origin
         "Instructor": "Skowronski, D.",
         "CRN": "40467"
     },
@@ -2098,7 +2664,11 @@ var the_data = [
     {
         "Course": "As St 2030 (801)",
         "Title": "Special Topics I: Disaster Japan: Earthquake, Tsunami, Nuclear Crisis and the Politics of 3.11",
+<<<<<<< HEAD
         "Day&Time": "TR\n17:30-19:00",
+=======
+        "Day&Time": "TTh\n17:30-19:00",
+>>>>>>> origin
         "Instructor": "Cleveland, K.",
         "CRN": "40690"
     },
@@ -2112,7 +2682,11 @@ var the_data = [
     {
         "Course": "Theat 0825 (801)",
         "Title": "The Art of Acting",
+<<<<<<< HEAD
         "Day&Time": "TR\n15:50-17:20",
+=======
+        "Day&Time": "TTh\n15:50-17:20",
+>>>>>>> origin
         "Instructor": "Roberts, W.",
         "CRN": "40381"
     },
@@ -2126,14 +2700,22 @@ var the_data = [
     {
         "Course": "Math 0702 (801)",
         "Title": "Intermediate Algebra",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:40",
+=======
+        "Day&Time": "TTh\n13:40-15:40",
+>>>>>>> origin
         "Instructor": "Wu, J.",
         "CRN": "40270"
     },
     {
         "Course": "As St 2000 (801)",
         "Title": "Special Topics in Asian Studies I: Social Inequality in Asia",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:10",
+=======
+        "Day&Time": "TTh\n13:40-15:10",
+>>>>>>> origin
         "Instructor": "Htun, T.",
         "CRN": "40480"
     },
@@ -2147,7 +2729,11 @@ var the_data = [
     {
         "Course": "Korean 1001 (802)",
         "Title": "Korean Elements I",
+<<<<<<< HEAD
         "Day&Time": "TR\n13:40-15:40",
+=======
+        "Day&Time": "TTh\n13:40-15:40",
+>>>>>>> origin
         "Instructor": "Park, K.",
         "CRN": "40303"
     }
