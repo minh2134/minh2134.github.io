@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="classes.css">
 </head>
+
 <body></body>
+
 </html>
 
 <script>
 
     "use strict";
-    
+
     //Declare Variables for Use in Scheduler
     var scheduleData = function () {
         for (var i = 0; i < the_data.length; i++) {
-            var course = the_data[i]["Course"];
+            //remove extra course numbers
+            var courseName = the_data[i]["Course"];
+            var course = courseName.substr(0,courseName.length - 6);
+            
             var title = the_data[i]["Title"];
             var dayTime = the_data[i]["Day&Time"];
 
@@ -31,18 +38,25 @@
             var timeEnd = timeArray[1];
             var instructor = the_data[i]["Instructor"];
             var crn = the_data[i]["CRN"];
-            console.log(course + " --- " + title + " --- " + day + " --- " + timeStart + " --- " + timeEnd + " --- " + instructor + " --- " + crn);
 
-          //  var date = day.split("");
-            /*    var schedule = [];
-                for (var i = 0; i < date.length; i++) {
-                    schedule[0] = date[i];
-                    schedule[1] = timeStart;
-                    schedule[2] = timeEnd;
-                } */
-           // console.log(date);
+            var schedule = course + " ; " + title + " ; " + day + " ; " + timeStart + " ; " + timeEnd + " ; " + instructor + " ; " + crn;
+            var scheduleArray = schedule.split(";");
+            //console.log(scheduleArray);
 
+            //split up days
+            var date = day.split("");
+
+            
+            //create schedule array
+            var a = [];
+            for (var i = 0; i < date.length; i++) {
+                a[i] = [date[i]];
+                a[i][1] = timeStart;
+                a[i][2] = timeEnd;
+            }
+            console.log(a);
         }
+
     };
 
     //document ready section
